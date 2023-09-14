@@ -1,0 +1,3 @@
+<template>
+  GRANTS
+</template>
