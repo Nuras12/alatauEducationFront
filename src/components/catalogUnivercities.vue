@@ -10,82 +10,30 @@
         <p class="filter__text">Фильтр: </p>
         <span class="filter__chose"></span>
         <select name="filter__select" id="filterSelect" class="filter__select">
-          <option value="">Город</option>
-          <option value="">Город 2</option>
-          <option value="">Город 3</option>
-          <option value="">Город 4</option>
+          <option :value="item.id" v-for="item in cities" :key="item.id">{{ item.nameRu }}</option>
         </select>
       </div>
     </div>
 
     <div class="catalog__content">
-      <div class="card">
-        <img src="../assets/card.png" alt="card" class="card__img">
-        <h3 class="card__title">Пекинский университет</h3>
-      </div>
-
-      <div class="card">
-        <img src="../assets/card.png" alt="card" class="card__img">
-        <h3 class="card__title">Шанхайский
-          университет</h3>
-      </div>
-
-      <div class="card">
-        <img src="../assets/card.png" alt="card" class="card__img">
-        <h3 class="card__title">Гонгконгский
-          университет</h3>
-      </div>
-
-      <div class="card">
-        <img src="../assets/card.png" alt="card" class="card__img">
-        <h3 class="card__title">Пекинский университет</h3>
-      </div>
-
-      <div class="card">
-        <img src="../assets/card.png" alt="card" class="card__img">
-        <h3 class="card__title">Шанхайский
-          университет</h3>
-      </div>
-
-      <div class="card">
-        <img src="../assets/card.png" alt="card" class="card__img">
-        <h3 class="card__title">Гонгконгский
-          университет</h3>
-      </div>
-
-      <div class="card">
-        <img src="../assets/card.png" alt="card" class="card__img">
-        <h3 class="card__title">Пекинский университет</h3>
-      </div>
-
-      <div class="card">
-        <img src="../assets/card.png" alt="card" class="card__img">
-        <h3 class="card__title">Шанхайский
-          университет</h3>
-      </div>
-
-      <div class="card">
-        <img src="../assets/card.png" alt="card" class="card__img">
-        <h3 class="card__title">Гонгконгский
-          университет</h3>
-      </div>
-
-      <div class="card">
-        <img src="../assets/card.png" alt="card" class="card__img">
-        <h3 class="card__title">Пекинский университет</h3>
-      </div>
-
-      <div class="card">
-        <img src="../assets/card.png" alt="card" class="card__img">
-        <h3 class="card__title">Шанхайский
-          университет</h3>
-      </div>
-
-      <div class="card">
-        <img src="../assets/card.png" alt="card" class="card__img">
-        <h3 class="card__title">Гонгконгский
-          университет</h3>
+      <div class="card" v-for="item in universities" :key="item.id">
+        <img :src="`${baseUrl}/${item.pic.path}`" alt="card" class="card__img">
+        <h3 class="card__title">{{ item.title }}</h3>
       </div>
     </div>
   </section>
 </template>
+
+<script setup lang="ts">
+import {ICities, IUniversities} from "../utils/universities";
+import {computed} from "vue";
+import {baseUrl} from "../plugins/http";
+
+const props = defineProps<{
+  universities: IUniversities[],
+  cities: ICities[]
+}>()
+const universities = computed(() => props.universities)
+const cities = computed(() => props.cities)
+
+</script>
