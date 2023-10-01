@@ -9,7 +9,7 @@
 import Header from "./components/Header.vue";
 import Footer from "./components/Footer.vue";
 import FormPage from "./components/FormPage.vue";
-import {useFormModal} from "./store/formModal.ts";
+import {useFormModal} from "./store/formModal";
 import {storeToRefs} from "pinia";
 
 const formModal = useFormModal()

@@ -1,5 +1,5 @@
-import {routeType} from "../types/routeType.ts";
-import router from "../router/router.ts";
+import {routeType} from "../types/routeType";
+import router from "../router/router";
 
 export const toRoute = (name: routeType) => {
     router.push({

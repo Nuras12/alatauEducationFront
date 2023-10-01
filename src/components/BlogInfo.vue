@@ -57,11 +57,11 @@
   </section>
 </template>
 <script setup lang="ts">
-import {IOneBlog} from "../utils/blogs.ts";
+import {IOneBlog} from "../utils/blogs";
 import {computed} from "vue";
-import parseDate from "../helpers/parseDate.ts";
-import {baseUrl} from "../plugins/http.ts";
-import router from "../router/router.ts";
+import parseDate from "../helpers/parseDate";
+import {baseUrl} from "../plugins/http";
+import router from "../router/router";
 const props = defineProps<{
   blog: IOneBlog
 }>()

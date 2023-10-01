@@ -12,7 +12,7 @@
   </section>
 </template>
 <script setup lang="ts">
-import {useFormModal} from "../store/formModal.ts";
+import {useFormModal} from "../store/formModal";
 
 const formModal = useFormModal()
 </script>

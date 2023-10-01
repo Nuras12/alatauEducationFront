@@ -31,9 +31,9 @@
 
 <script setup lang="ts">
 import {ref} from "vue";
-import {baseUrl} from "../plugins/http.ts";
-import {IDataBlogs} from "../utils/blogs.ts";
-import router from "../router/router.ts";
+import {baseUrl} from "../plugins/http";
+import {IDataBlogs} from "../utils/blogs";
+import router from "../router/router";
 
 
 const input = ref('')

@@ -7,7 +7,7 @@
 <script setup lang="ts">
 import CatalogBlog from "../components/catalogBlog.vue";
 import {onMounted, ref} from "vue";
-import {getBlogs, IDataBlogs, IResponseBlogs, searchBlogs} from "../utils/blogs.ts";
+import {getBlogs, IDataBlogs, IResponseBlogs, searchBlogs} from "../utils/blogs";
 
 const blogs = ref<IDataBlogs[]>([])
 

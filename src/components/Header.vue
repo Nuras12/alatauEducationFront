@@ -35,7 +35,7 @@
 import {toRoute} from "../store/useToRoute";
 import {ref, watch} from "vue";
 import {useRoute} from "vue-router";
-import {useFormModal} from "../store/formModal.ts";
+import {useFormModal} from "../store/formModal";
 const route = useRoute()
 const formModal = useFormModal()
 const menu = ref(false)
