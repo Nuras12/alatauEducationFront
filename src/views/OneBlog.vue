@@ -7,7 +7,7 @@
 <script setup lang="ts">
 import BlogInfo from "../components/BlogInfo.vue";
 import {onMounted, ref} from "vue";
-import {getBlogArticle, IOneBlog} from "../plugins/blogs.ts";
+import {getBlogArticle, IOneBlog} from "../utils/blogs.ts";
 import {useRoute} from "vue-router";
 
 const route = useRoute()

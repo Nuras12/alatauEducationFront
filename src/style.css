@@ -12,6 +12,10 @@
     scroll-behavior: smooth;
 }
 
+a {
+    cursor: pointer;
+}
+
 #app {
     margin: 0 auto;
     max-width: 1920px;

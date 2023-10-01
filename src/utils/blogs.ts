@@ -1,4 +1,4 @@
-import {Http} from "./http.ts";
+import {Http} from "../plugins/http.ts";
 
 export interface IResponseBlogs {
     data: IDataBlogs[],
