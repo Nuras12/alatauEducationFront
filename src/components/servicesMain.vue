@@ -2,7 +2,7 @@
   <section class="services">
     <div class="services__head section__head">
       <h3 class="section__title">Наши услуги</h3>
-      <a href="" class="section__link">Узнать больше <img src="../assets/sectionArrow.svg" alt="arrow"></a>
+      <a @click="toRoute('ourServices')" class="section__link">Узнать больше <img src="../assets/sectionArrow.svg" alt="arrow"></a>
     </div>
 
     <div class="services__content">
@@ -42,3 +42,6 @@
     <btn class="services__btn-more btn-more">Посмотреть все <img src="" alt="" class="btn-more__arrow"></btn>
   </section>
 </template>
+<script setup lang="ts">
+import {toRoute} from "../store/useToRoute.js";
+</script>

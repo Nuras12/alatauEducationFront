@@ -10,7 +10,7 @@
     </div>
     <div class="footer__head">
       <div class="footer__title">Консультация по обучению в Китае</div>
-      <button class="footer__button">Оставить заявку</button>
+      <button class="footer__button" @click="formModal.showModal()">Оставить заявку</button>
       <div class="footer__mountains"></div>
     </div>
     <div class="footer__main">
@@ -71,3 +71,9 @@
     </div>
   </footer>
 </template>
+
+<script setup lang="ts">
+import {useFormModal} from "../store/formModal.ts";
+
+const formModal = useFormModal()
+</script>

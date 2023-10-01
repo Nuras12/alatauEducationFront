@@ -57,7 +57,7 @@
   </section>
 </template>
 <script setup lang="ts">
-import {IOneBlog} from "../plugins/blogs.ts";
+import {IOneBlog} from "../utils/blogs.ts";
 import {computed} from "vue";
 import parseDate from "../helpers/parseDate.ts";
 import {baseUrl} from "../plugins/http.ts";

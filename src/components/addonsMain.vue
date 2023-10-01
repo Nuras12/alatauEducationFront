@@ -2,7 +2,7 @@
   <section class="addons">
     <div class="addons__head section__head">
       <h3 class="section__title">Что входит в грант</h3>
-      <a href="" class="section__link">Узнать больше <img src="../assets/sectionArrow.svg" alt="arrow"></a>
+      <a @click="toRoute('grants')" class="section__link">Узнать больше <img src="../assets/sectionArrow.svg" alt="arrow"></a>
     </div>
 
     <div class="addons__content">
@@ -42,3 +42,6 @@
 
   </section>
 </template>
+<script setup lang="ts">
+import {toRoute} from "../store/useToRoute.js";
+</script>
