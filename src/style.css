@@ -1689,6 +1689,7 @@ a {
 
 .info__content {
     margin-left: 10vw;
+    z-index: 2;
 }
 
 .info__btn {
