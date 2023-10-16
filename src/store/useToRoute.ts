@@ -1,8 +1,8 @@
-import {routeType} from "../types/routeType";
-import router from "../router/router";
+import { routeType } from "@types/routeType";
+import router from "@router/router";
 
 export const toRoute = (name: routeType) => {
-    router.push({
-        name
-    })
-}
+  router.push({
+    name,
+  });
+};

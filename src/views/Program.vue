@@ -1,8 +1,8 @@
 <template>
-  <ProgramPreview/>
-  <ProgramAbout/>
+  <ProgramPreview />
+  <ProgramAbout />
 </template>
 <script setup lang="ts">
-import ProgramPreview from "../components/programPreview.vue";
-import ProgramAbout from "../components/programAbout.vue";
+import ProgramPreview from "@components/static_pages/programPreview.vue";
+import ProgramAbout from "@components/static_pages/programAbout.vue";
 </script>

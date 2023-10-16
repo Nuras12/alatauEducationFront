@@ -11,7 +11,20 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "noEmit": true
+    "noEmit": true,
+    "paths": {
+      "@/*": ["./src/*"],
+      "@assets/*": ["./src/shared/assets/*"],
+      "@helpers/*": ["./src/helpers/*"],
+      "@plugins/*": ["./src/plugins/*"],
+      "@router/*": ["./src/router/*"],
+      "@utils/*": ["./src/utils/*"],
+      "@store/*": ["./src/store/*"],
+      "@views/*": ["./src/views/*"],
+      "@components/*": ["./src/components/*"],
+      "@types/*": ["./src/types/*"]
+
+    }
   },
   "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
   "references": [{ "path": "./tsconfig.node.json" }]

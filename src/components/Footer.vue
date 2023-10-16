@@ -2,15 +2,22 @@
   <footer class="footer">
     <div class="footer__china">
       <div class="w-full overflow-hidden absolute left-0 bg-alBlue py-[20px]">
-        <marquee loop="-1" behavior="smooth" scrollamount="10px" direction="left"
-                 class="text-white font-bold flex items-center text-[40px]">
+        <marquee
+          loop="-1"
+          behavior="smooth"
+          scrollamount="10px"
+          direction="left"
+          class="text-white font-bold flex items-center text-[40px]"
+        >
           外国人来华留学·中国留学·本科·研究生·预科班·外国人来华留学·中国留学·本科·研究生·预科班·外国人来华留学·中国留学·本科·研究生·预科班·外国人来华留学·中国留学·本科·研究生·预科班·外国人来华留学·中国留学·本科·研究生·预科班·外国人来华留学·中国留学·本科·研究生·预科班·外国人来华留学·中国留学·本科·研究生·预科班·外国人来华留学·中国留学·本科·研究生·预科班·外国人来华留学·中国留学·本科·研究生·预科班·外国人来华留学·中国留学·本科·研究生·预科班·外国人来华留学·中国留学·本科·研究生·预科班·外国人来华留学·中国留学·本科·研究生·预科班·
         </marquee>
       </div>
     </div>
     <div class="footer__head">
       <div class="footer__title">Консультация по обучению в Китае</div>
-      <button class="footer__button" @click="formModal.showModal()">Оставить заявку</button>
+      <button class="footer__button" @click="formModal.showModal()">
+        Оставить заявку
+      </button>
       <div class="footer__mountains"></div>
     </div>
     <div class="footer__main">
@@ -48,22 +55,44 @@
           <div class="footer__social">
             <p class="footer__social-text">Следите за нами</p>
             <a href="" class="footer__social-link">
-              <img src="../assets/instagramLogo.png" alt="instagram" class="footer__social-img footer__social-img_insta">
+              <img
+                src="@assets/instagramLogo.png"
+                alt="instagram"
+                class="footer__social-img footer__social-img_insta"
+              />
             </a>
             <a href="" class="footer__social-link">
-              <img src="../assets/whatsappLogo.png" alt="whatsapp" class="footer__social-img">
+              <img
+                src="@assets/whatsappLogo.png"
+                alt="whatsapp"
+                class="footer__social-img"
+              />
             </a>
             <a href="" class="footer__social-link">
-              <img src="../assets/youtubeLogo.png" alt="youtube" class="footer__social-img">
+              <img
+                src="@assets/youtubeLogo.png"
+                alt="youtube"
+                class="footer__social-img"
+              />
             </a>
           </div>
 
           <div class="footer__data">
             <p class="footer__contact">
-              <img src="../assets/footerMail.png" alt="mail" class="footer__contact-img footer__mail"> Alatau.edu@gmail.com
+              <img
+                src="@assets/footerMail.png"
+                alt="mail"
+                class="footer__contact-img footer__mail"
+              />
+              Alatau.edu@gmail.com
             </p>
             <p class="footer__contact">
-              <img src="../assets/footerPhone.png" alt="mail" class="footer__contact-img footer__phone"> + 7 (707) 926 25 69
+              <img
+                src="@assets/footerPhone.png"
+                alt="mail"
+                class="footer__contact-img footer__phone"
+              />
+              + 7 (707) 926 25 69
             </p>
           </div>
         </div>
@@ -73,7 +102,7 @@
 </template>
 
 <script setup lang="ts">
-import {useFormModal} from "../store/formModal";
+import { useFormModal } from "@store/formModal";
 
-const formModal = useFormModal()
+const formModal = useFormModal();
 </script>

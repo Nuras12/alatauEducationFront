@@ -1,8 +1,8 @@
 <template>
-  <section class="univers univers_univer-about">
+  <section class="univers">
     <div class="univers__head section__head">
-      <h3 class="section__title section__title_univer-about">Узнайте больше</h3>
-      <a href="" class="section__link"
+      <h3 class="section__title">Университеты</h3>
+      <a @click="toRoute('universities')" class="section__link"
         >Узнать больше <img src="@assets/sectionArrow.svg" alt="arrow"
       /></a>
     </div>
@@ -41,3 +41,6 @@
     </div>
   </section>
 </template>
+<script setup lang="ts">
+import { toRoute } from "@store/useToRoute.js";
+</script>
