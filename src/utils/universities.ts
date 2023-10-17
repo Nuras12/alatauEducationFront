@@ -30,10 +30,11 @@ export interface IOneUniversity extends IUniversities {
   viewCount: number;
 }
 
-export const getViewable3 = async (): Promise<IUniversities[]> => {
-  const res = await Http().get(
-    "/api/universities?limit=3&sortBy=viewCount:DESC"
-  );
+export const getViewable = async (
+  limit: number = 3
+): Promise<IUniversities[]> => {
+  const url = `/api/universities?limit=${limit}&sortBy=viewCount:DESC`;
+  const res = await Http().get(url);
 
   return res.data.data;
 };

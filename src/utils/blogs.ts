@@ -30,3 +30,10 @@ export const searchBlogs = (query: string) => {
 export const getBlogArticle = (id: string) => {
   return Http().get(`/api/articles/${id}`);
 };
+
+export const getNewest = async (limit: number = 3): Promise<IDataBlogs[]> => {
+  const url = `/api/articles?limit=${limit}&sortBy=created_at:DESC`;
+  const res = await Http().get(url);
+
+  return res.data.data;
+};

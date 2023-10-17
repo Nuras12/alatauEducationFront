@@ -28,7 +28,7 @@
 </template>
 
 <script setup lang="ts">
-import { IUniversities, getViewable3 } from "@utils/universities";
+import { IUniversities, getViewable } from "@utils/universities";
 import { onMounted, ref } from "vue";
 import img from "@assets/univer1.png";
 
@@ -39,6 +39,6 @@ const replaceByDefault = (e) => {
 };
 
 onMounted(async () => {
-  universities.value = await getViewable3();
+  universities.value = await getViewable();
 });
 </script>

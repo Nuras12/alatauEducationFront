@@ -9,7 +9,14 @@
           direction="left"
           class="text-white font-bold flex items-center text-[40px]"
         >
-          外国人来华留学  中国留学  本科  研究生  预科班  外国人来华留学  中国留学  本科  研究生  预科班  外国人来华留学  中国留学  本科  研究生  预科班  外国人来华留学  中国留学  本科  研究生  预科班  外国人来华留学  中国留学  本科  研究生  预科班  外国人来华留学  中国留学  本科  研究生  预科班  外国人来华留学  中国留学  本科  研究生  预科班  外国人来华留学  中国留学  本科  研究生  预科班  外国人来华留学  中国留学  本科  研究生  预科班  外国人来华留学  中国留学  本科  研究生  预科班  外国人来华留学  中国留学  本科  研究生  预科班  外国人来华留学  中国留学  本科  研究生  预科班  
+          外国人来华留学 中国留学 本科 研究生 预科班 外国人来华留学 中国留学
+          本科 研究生 预科班 外国人来华留学 中国留学 本科 研究生 预科班
+          外国人来华留学 中国留学 本科 研究生 预科班 外国人来华留学 中国留学
+          本科 研究生 预科班 外国人来华留学 中国留学 本科 研究生 预科班
+          外国人来华留学 中国留学 本科 研究生 预科班 外国人来华留学 中国留学
+          本科 研究生 预科班 外国人来华留学 中国留学 本科 研究生 预科班
+          外国人来华留学 中国留学 本科 研究生 预科班 外国人来华留学 中国留学
+          本科 研究生 预科班 外国人来华留学 中国留学 本科 研究生 预科班
         </marquee>
       </div>
     </div>
@@ -33,9 +40,13 @@
 
           <div class="nav__column">
             <a href="" class="nav__title">Университеты</a>
-            <a href="" class="nav__link">Шаньханский</a>
-            <a href="" class="nav__link">Пекинский</a>
-            <a href="" class="nav__link">Алмазский</a>
+            <a
+              :href="`/universities/${item.path}`"
+              class="nav__link"
+              v-for="item in universities"
+              :key="item.id"
+              >{{ item.title }}</a
+            >
           </div>
 
           <div class="nav__column">
@@ -47,7 +58,13 @@
 
           <div class="nav__column">
             <a href="" class="nav__title">Блог</a>
-            <a href="" class="nav__link">Что-то там</a>
+            <a
+              :href="`/blogs/${item.path}`"
+              class="nav__link"
+              v-for="item in blogs"
+              :key="item.id"
+              >{{ item.title }}</a
+            >
           </div>
         </div>
         <div class="footer__line"></div>
@@ -103,6 +120,16 @@
 
 <script setup lang="ts">
 import { useFormModal } from "@store/formModal";
+import { IDataBlogs, getNewest } from "@utils/blogs";
+import { IUniversities, getViewable } from "@utils/universities";
+import { onMounted, ref } from "vue";
 
+const blogs = ref<IDataBlogs[]>([]);
+const universities = ref<IUniversities[]>([]);
 const formModal = useFormModal();
+
+onMounted(async () => {
+  universities.value = await getViewable(4);
+  blogs.value = await getNewest(4);
+});
 </script>
