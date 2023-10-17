@@ -1,6 +1,6 @@
 <template>
   <div class="program-preview">
-    <a href="" class="history__nav"
+    <a @click="goBack" class="history__nav"
       ><img src="@assets/backArrow.png" alt="back" class="history__arrow" />
       Назад</a
     >
@@ -19,3 +19,10 @@
     </div>
   </div>
 </template>
+<script setup lang="ts">
+import router from "@router/router";
+
+const goBack = () => {
+  router.go(-1);
+};
+</script>

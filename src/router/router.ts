@@ -58,9 +58,9 @@ const routes: Array<RouteRecordRaw> = [
     component: () => import("@views/University.vue"),
   },
   {
-    path: "/program",
-    name: "program",
-    component: () => import("@views/Program.vue"),
+    path: "/programs/1+4",
+    name: "program1+4",
+    component: () => import("@views/static_articles/ProgramOnePlusFour.vue"),
   },
 ];
 
