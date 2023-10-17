@@ -4,7 +4,7 @@
 </template>
 <script setup lang="ts">
 import Info from "@components/university/item.vue";
-import About from "@components/universityAbout.vue";
+import About from "@components/university/topList.vue";
 
 import { onMounted, ref } from "vue";
 import { getUniversityByPath, IOneUniversity } from "@utils/universities";

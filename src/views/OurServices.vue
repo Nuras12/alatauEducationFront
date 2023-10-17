@@ -1,10 +1,10 @@
 <template>
-  <PreviewOurServices />
+  <Preview />
   <ListOurServices />
   <VisaOurServices />
 </template>
 <script setup lang="ts">
-import PreviewOurServices from "@components/previewOurServices.vue";
-import ListOurServices from "@components/static_pages/listOurServices.vue";
-import VisaOurServices from "@components/visaOurServices.vue";
+import Preview from "@components/services/preview.vue";
+import ListOurServices from "@components/services/catalog.vue";
+import VisaOurServices from "@components/services/visa.vue";
 </script>

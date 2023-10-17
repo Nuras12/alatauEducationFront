@@ -1,6 +1,6 @@
 <template>
-  <PreviewUnivercities />
-  <CatalogUnivercities
+  <Preview />
+  <Catalog
     :universities="universities"
     :cities="cities"
     :setCityId="setId"
@@ -8,8 +8,8 @@
   />
 </template>
 <script setup lang="ts">
-import PreviewUnivercities from "@components/university/previewUnivercities.vue";
-import CatalogUnivercities from "@components/university/catalog.vue";
+import Preview from "@components/university/preview.vue";
+import Catalog from "@components/university/catalog.vue";
 import {
   getCities,
   getUniversities,
