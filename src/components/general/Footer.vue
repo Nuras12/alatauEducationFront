@@ -51,7 +51,7 @@
 
           <div class="nav__column">
             <a href="" class="nav__title">Наши услуги</a>
-            <a href="" class="nav__link">Программа 1+4</a>
+            <a href="/programs/1+4" class="nav__link">Программа 1+4</a>
             <a href="" class="nav__link">Языковой год</a>
             <a href="" class="nav__link">Бакалавриат</a>
           </div>

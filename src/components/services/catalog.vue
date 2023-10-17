@@ -6,7 +6,7 @@
         <h4 class="services-card__title">Программа 1+4</h4>
         <p class="services-card__text">Вам не нужно сдавать никаких экзаменов!</p>
 
-        <a href="" class="services-card__link">Узнать больше</a>
+        <a href="/programs/1+4" class="services-card__link">Узнать больше</a>
       </div>
 
       <div class="services-card">
