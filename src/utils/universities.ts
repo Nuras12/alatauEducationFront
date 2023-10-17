@@ -22,8 +22,15 @@ export interface ICities {
   nameEn: string;
   nameRu: string;
 }
-export const getUniversities = () => {
-  return Http().get("/api/universities?limit=10");
+export const getUniversities = (
+  cityId: string = null,
+  searchString: string = null
+) => {
+  const filter =
+    !cityId || cityId === "all" ? "" : `&filter.city.(id)=$eq:${cityId}`;
+
+  const search = searchString ? `&search=${searchString}` : "";
+  return Http().get("/api/universities?limit=10" + filter + search);
 };
 export const getCities = () => {
   return Http().get("/api/universities/cities?limit=10");

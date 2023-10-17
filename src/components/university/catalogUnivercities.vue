@@ -7,8 +7,10 @@
           name="searchbar__input"
           class="searchbar__input"
           placeholder="Поиск"
+          v-model="searchStr"
+          @keydown="onEnter"
         />
-        <button class="searchbar__btn">
+        <button class="searchbar__btn" @click="onEnter">
           <img src="@assets/search.png" alt="Find" class="searchbar__btn-img" />
         </button>
       </div>
@@ -16,7 +18,14 @@
       <div class="catalog__filter filter">
         <p class="filter__text">Фильтр:</p>
         <span class="filter__chose"></span>
-        <select name="filter__select" id="filterSelect" class="filter__select">
+        <!--TODO: refactor with v-model -->
+        <select
+          name="filter__select"
+          id="filterSelect"
+          class="filter__select"
+          @change="(e) => setCityId((<HTMLInputElement>e.target).value)"
+        >
+          <option :value="'all'" selected>Все города</option>
           <option :value="item.id" v-for="item in cities" :key="item.id">
             {{ item.nameRu }}
           </option>
@@ -38,14 +47,30 @@
 </template>
 
 <script setup lang="ts">
-import { ICities, IUniversities } from "@utils/universities";
-import { computed } from "vue";
+import { ICities, IUniversities, getUniversities } from "@utils/universities";
+import { computed, ref } from "vue";
 import { baseUrl } from "@plugins/http";
 
 const props = defineProps<{
   universities: IUniversities[];
   cities: ICities[];
+  setCityId: (cityId: string) => void;
+  search: Function;
 }>();
+
 const universities = computed(() => props.universities);
 const cities = computed(() => props.cities);
+const setCityId = computed(() => props.setCityId);
+
+let searchStr = "";
+
+const onEnter = (e: Event) => {
+  if (e instanceof KeyboardEvent && ["Enter", "NumpadEnter"].includes(e.code)) {
+    props.search(searchStr);
+  }
+
+  if (e instanceof MouseEvent && e.type === "click") {
+    props.search(searchStr);
+  }
+};
 </script>
