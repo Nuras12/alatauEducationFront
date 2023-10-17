@@ -45,7 +45,7 @@
           alt="card"
           class="card__img"
         />
-        <h3 class="card__title">{{ item.title }}</h3>
+        <h2 class="card__title">{{ item.title }}</h2>
       </div>
     </div>
   </section>

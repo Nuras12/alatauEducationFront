@@ -67,6 +67,9 @@ const routes: Array<RouteRecordRaw> = [
 const router: Router = createRouter({
   history: createWebHistory(),
   routes,
+  scrollBehavior() {
+    return { top: 0 };
+  },
 });
 
 router.beforeEach((to, from, next) => {

@@ -2,7 +2,7 @@
   <section class="univers univers_univer-about">
     <div class="univers__head section__head">
       <h3 class="section__title section__title_univer-about">Узнайте больше</h3>
-      <a href="" class="section__link"
+      <a href="/universities" class="section__link"
         >Узнать больше <img src="@assets/sectionArrow.svg" alt="arrow"
       /></a>
     </div>

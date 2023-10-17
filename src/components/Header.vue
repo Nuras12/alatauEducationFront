@@ -1,7 +1,7 @@
 <template>
   <header class="header">
     <div class="header__content">
-      <div class="header__logo" @click="toRoute('main')"></div>
+      <a class="header__logo" @click="toRoute('main')"></a>
 
       <a class="header__link" @click="toRoute('aboutUs')">О нас</a>
       <a class="header__link" @click="toRoute('grants')">Гранты в Китай</a>
