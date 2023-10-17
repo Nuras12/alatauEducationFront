@@ -36,7 +36,7 @@
         v-if="props.blogs.length"
         v-for="item in props.blogs"
         :key="item.id"
-        @click="selectBlog(item.id)"
+        @click="selectBlog(item.path)"
       >
         <img :src="`${baseUrl}${item.pic.path}`" alt="card" class="card__img" />
         <h3 class="card__title">{{ item.title }}</h3>
@@ -61,11 +61,13 @@ const emit = defineEmits(["search"]);
 const search = () => {
   emit("search", input.value);
 };
-const selectBlog = (id: number) => {
+const selectBlog = (path: string) => {
+  console.log({ path });
+
   router.push({
     name: "one-blog",
     params: {
-      article: id,
+      articlePath: path,
     },
   });
 };

@@ -1,1 +1,1 @@
-export type routeType = 'main' | 'aboutUs' | 'grants' | 'universities' | 'blog' | 'ourServices'
+export type routeType = 'main' | 'aboutUs' | 'grants' | 'universities' | 'blogs' | 'ourServices'

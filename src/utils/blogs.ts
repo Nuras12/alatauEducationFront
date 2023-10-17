@@ -27,8 +27,8 @@ export const getBlogs = () => {
 export const searchBlogs = (query: string) => {
   return Http().get(`/api/articles?limit=10&search=${query}`);
 };
-export const getBlogArticle = (id: string) => {
-  return Http().get(`/api/articles/${id}`);
+export const getBlogArticleByPath = (path: string) => {
+  return Http().get(`/api/articles/transcription/${path}`);
 };
 
 export const getNewest = async (limit: number = 3): Promise<IDataBlogs[]> => {

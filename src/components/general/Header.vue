@@ -7,7 +7,7 @@
       <a class="header__link" @click="toRoute('grants')">Гранты в Китай</a>
       <a class="header__link" @click="toRoute('universities')">Университеты</a>
       <a class="header__link" @click="toRoute('ourServices')">Наши услуги</a>
-      <a class="header__link" @click="toRoute('blog')">Блог</a>
+      <a class="header__link" @click="toRoute('blogs')">Блог</a>
 
       <button class="header__button" @click="formModal.showModal()">
         Оставить заявку
@@ -49,7 +49,7 @@
       <li class="cursor-pointer" @click="toRoute('ourServices')">
         Наши услуги
       </li>
-      <li class="cursor-pointer" @click="toRoute('blog')">Блог</li>
+      <li class="cursor-pointer" @click="toRoute('blogs')">Блог</li>
     </ul>
   </div>
 </template>

@@ -4,15 +4,15 @@
 <script setup lang="ts">
 import BlogInfo from "@components/blog/info.vue";
 import { onMounted, ref } from "vue";
-import { getBlogArticle, IOneBlog } from "@utils/blogs";
+import { getBlogArticleByPath, IOneBlog } from "@utils/blogs";
 import { useRoute } from "vue-router";
 
 const route = useRoute();
 const blog = ref<IOneBlog>(null);
-const article = route.params.article.toString();
+const articlePath = route.params.articlePath.toString();
 
 onMounted(async () => {
-  const { data: response }: { data: IOneBlog } = await getBlogArticle(article);
+  const { data: response }: { data: IOneBlog } = await getBlogArticleByPath(articlePath);
   blog.value = response;
   console.log(response.created_at);
 });

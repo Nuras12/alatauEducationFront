@@ -43,12 +43,12 @@ const routes: Array<RouteRecordRaw> = [
     component: () => import("@views/OurServices.vue"),
   },
   {
-    path: "/blog",
-    name: "blog",
+    path: "/blogs",
+    name: "blogs",
     component: () => import("@views/Blog.vue"),
   },
   {
-    path: "/blog/article/:article",
+    path: "/blogs/:articlePath",
     name: "one-blog",
     component: () => import("@views/OneBlog.vue"),
   },
