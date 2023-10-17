@@ -9,7 +9,7 @@
 </template>
 <script setup lang="ts">
 import PreviewUnivercities from "@components/university/previewUnivercities.vue";
-import CatalogUnivercities from "@components/university/catalogUnivercities.vue";
+import CatalogUnivercities from "@components/university/catalog.vue";
 import {
   getCities,
   getUniversities,

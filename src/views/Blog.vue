@@ -2,7 +2,7 @@
   <CatalogBlog :blogs="blogs" @search="search" />
 </template>
 <script setup lang="ts">
-import CatalogBlog from "@components/catalogBlog.vue";
+import CatalogBlog from "@components/blog/catalog.vue";
 import { onMounted, ref } from "vue";
 import {
   getBlogs,

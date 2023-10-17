@@ -34,7 +34,12 @@
     </div>
 
     <div class="catalog__content">
-      <div class="card" v-for="item in universities" :key="item.id">
+      <div
+        class="card"
+        v-for="item in universities"
+        :key="item.id"
+        @click="selectUniversity(item.path)"
+      >
         <img
           :src="`${baseUrl}/${item.pic.path}`"
           alt="card"
@@ -50,6 +55,7 @@
 import { ICities, IUniversities, getUniversities } from "@utils/universities";
 import { computed, ref } from "vue";
 import { baseUrl } from "@plugins/http";
+import router from "@/router/router";
 
 const props = defineProps<{
   universities: IUniversities[];
@@ -72,5 +78,14 @@ const onEnter = (e: Event) => {
   if (e instanceof MouseEvent && e.type === "click") {
     props.search(searchStr);
   }
+};
+
+const selectUniversity = (path: string) => {
+  router.push({
+    name: "one-university",
+    params: {
+      universityPath: path,
+    },
+  });
 };
 </script>

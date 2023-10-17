@@ -11,6 +11,7 @@ export interface IUniversities {
     id: number;
     nameRu: string;
   };
+  created_at: string;
 }
 
 export interface ICities {
@@ -22,6 +23,13 @@ export interface ICities {
   nameEn: string;
   nameRu: string;
 }
+
+export interface IOneUniversity extends IUniversities {
+  htmlBody: string;
+  isActive: boolean;
+  viewCount: number;
+}
+
 export const getUniversities = (
   cityId: string = null,
   searchString: string = null
@@ -34,4 +42,9 @@ export const getUniversities = (
 };
 export const getCities = () => {
   return Http().get("/api/universities/cities?limit=10");
+};
+
+export const getUniversityByPath = async (path: string): Promise<IOneUniversity> => {
+  const res = await Http().get(`/api/universities/transcription/${path}`)
+  return res.data;
 };
