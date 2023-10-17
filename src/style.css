@@ -2108,13 +2108,14 @@ a {
 
     display: flex;
     justify-content: center;
-    align-items: center;
+    /* align-items: center; */
 
     gap: 20px;
 
 }
 
 .univer {
+    /* height: 280px; */
     width: 24.6vw;
     display: flex;
     flex-direction: column;

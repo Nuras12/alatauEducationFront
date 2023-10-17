@@ -5,7 +5,7 @@
         src="@assets/backArrow.png"
         alt="back"
         class="history__arrow"
-      />Блоги</a
+      />Университеты</a
     >
 
     <div class="univer-info__content">
@@ -29,7 +29,10 @@
         </div>
       </div>
       <div class="univer-info__text">
-        <div v-html="universityItem.htmlBody" class="univer-info__describe"></div>
+        <div
+          v-html="universityItem.htmlBody"
+          class="univer-info__describe"
+        ></div>
       </div>
 
       <div class="univer-info__footer">

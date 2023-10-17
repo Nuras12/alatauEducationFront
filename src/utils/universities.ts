@@ -30,6 +30,14 @@ export interface IOneUniversity extends IUniversities {
   viewCount: number;
 }
 
+export const getViewable3 = async (): Promise<IUniversities[]> => {
+  const res = await Http().get(
+    "/api/universities?limit=3&sortBy=viewCount:DESC"
+  );
+
+  return res.data.data;
+};
+
 export const getUniversities = (
   cityId: string = null,
   searchString: string = null
@@ -44,7 +52,9 @@ export const getCities = () => {
   return Http().get("/api/universities/cities?limit=10");
 };
 
-export const getUniversityByPath = async (path: string): Promise<IOneUniversity> => {
-  const res = await Http().get(`/api/universities/transcription/${path}`)
+export const getUniversityByPath = async (
+  path: string
+): Promise<IOneUniversity> => {
+  const res = await Http().get(`/api/universities/transcription/${path}`);
   return res.data;
 };

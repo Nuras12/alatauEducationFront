@@ -1,10 +1,10 @@
 <template>
-  <UnivercityInfo v-if="universityItem" :university-item="universityItem" />
-  <UnivercityAbout />
+  <Info v-if="universityItem" :university-item="universityItem" />
+  <About />
 </template>
 <script setup lang="ts">
-import UnivercityInfo from "@components/university/item.vue";
-import UnivercityAbout from "@components/univercityAbout.vue";
+import Info from "@components/university/item.vue";
+import About from "@components/universityAbout.vue";
 
 import { onMounted, ref } from "vue";
 import { getUniversityByPath, IOneUniversity } from "@utils/universities";
