@@ -62,6 +62,11 @@ const routes: Array<RouteRecordRaw> = [
     name: "program1+4",
     component: () => import("@views/static_articles/ProgramOnePlusFour.vue"),
   },
+  {
+    path: "/:pathMatch(.*)*",
+    name: "not found",
+    component: () => import("@views/PageNotFound.vue"),
+  },
 ];
 
 const router: Router = createRouter({

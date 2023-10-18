@@ -17,6 +17,8 @@ export interface IDataBlogs {
 }
 export interface IOneBlog extends IDataBlogs {
   htmlBody: string;
+  innerTitle: string;
+  description: string;
   isActive: boolean;
   viewCount: number;
 }

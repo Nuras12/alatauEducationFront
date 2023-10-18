@@ -17,6 +17,17 @@ import {
   IUniversities,
 } from "@utils/universities";
 import { onMounted, ref, watch } from "vue";
+import { useHead } from "@unhead/vue";
+useHead({
+  title: "Университеты Китая - Alatau Education",
+  meta: [
+    {
+      name: "description",
+      content:
+        "Узнайте больше о университетах Китая с Alatau Education. История, академическая программа, возможности для международных студентов и многое другое. Исследуйте учебные заведения Китая прямо сейчас.",
+    },
+  ],
+});
 
 const universities = ref<IUniversities[]>([]);
 const cities = ref<ICities[]>([]);

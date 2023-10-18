@@ -26,6 +26,8 @@ export interface ICities {
 
 export interface IOneUniversity extends IUniversities {
   htmlBody: string;
+  innerTitle: string;
+  description: string;
   isActive: boolean;
   viewCount: number;
 }

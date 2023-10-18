@@ -10,6 +10,15 @@ import {
   IResponseBlogs,
   searchBlogs,
 } from "@utils/blogs";
+import { useHead } from "@unhead/vue";
+
+useHead({
+  title: "Блог - Alatau Education",
+  meta: [{
+    name: 'description',
+    content: 'Исследуйте наш блог, где мы делимся полезными статьями, лайфхаками и свежими новостями об образовании в Китае и не только. Узнайте о последних трендах и советах для успешного обучения за рубежом.'
+  }]
+});
 
 const blogs = ref<IDataBlogs[]>([]);
 
